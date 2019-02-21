@@ -3,14 +3,15 @@
 using namespace std;
 
 int main() {
-	int a = 0;
-	int b = 0;
-	int sum = 0;
+	int 
+		a, 
+		b;
 
 	cin >> a;
 	cin >> b;
-	sum = a+b;
-	cout << sum;
-	
+
+	cout << a + b << endl;
+	// printf("The sum of %d and %d is %d\n", a, b, a + b);
+
 	return 0;
 }
