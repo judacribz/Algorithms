@@ -1,8 +1,5 @@
 #include <iostream>
 #include <cassert>
-#include <vector>
-
-using namespace std;
 // The following code calls a naive algorithm for computing a Fibonacci number.
 //
 // What to do:
@@ -50,7 +47,7 @@ void test_solution() {
 
 int main() {
     int n = 0;
-    
+
     std::cin >> n;
 
     std::cout << fibonacci_fast(n) << '\n';
