@@ -1,4 +1,9 @@
 #include <iostream>
+#include <cassert>
+
+#define LL long long
+
+using namespace std;
 
 int fibonacci_sum_squares_naive(long long n) {
     if (n <= 1)
@@ -18,8 +23,30 @@ int fibonacci_sum_squares_naive(long long n) {
     return sum % 10;
 }
 
+long fibonacci_sum_squares_fast(LL n) {
+    if (n <= 1) {
+        return n;
+    }
+
+    long 
+        a = 0,
+        b  = 1,
+        period = 60, // pisano period is always 60 for mod 10
+        sum = 0,
+        temp;
+
+    for (int i = 0; i < n % period; i++) {
+        sum = (sum + (b * b) % 10 ) % 10;
+        temp = b;
+        b = (a + b);
+        a = temp;
+    }
+
+    return sum;
+}
+
 int main() {
-    long long n = 0;
-    std::cin >> n;
-    std::cout << fibonacci_sum_squares_naive(n);
+    LL n = 0;
+    cin >> n;
+    cout << fibonacci_sum_squares_fast(n) << endl;
 }

@@ -24,12 +24,12 @@ int fibonacci_sum_naive(LL n) {
 }
 
 
-int fibonacci_sum_fast(LL n) {
+long fibonacci_sum_fast(LL n) {
     if (n <= 1) {
         return n;
     }
 
-    int 
+    long 
         a = 0,
         b  = 1,
         period = 60, // pisano period is always 60 for mod 10
@@ -55,7 +55,7 @@ int fibonacci_sum_fast(LL n) {
     // cout << sum << endl;
     // a = 0, b = 1;
 
-    for (LL i = 0; i < n % period; i++) {
+    for (int i = 0; i < n % period; i++) {
         sum = (sum + b) % 10;
         temp = b;
         b = (a + b) % 10;
