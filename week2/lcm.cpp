@@ -11,6 +11,7 @@ LL lcm_naive(int a, int b) {
   return (LL) a * b;
 }
 
+
 LL lcm_fast(int a, int b) {
     int max = std::max(a, b);
 
@@ -25,7 +26,9 @@ LL lcm_fast(int a, int b) {
 
 int main() {
   int a, b;
+
   std::cin >> a >> b;
   std::cout << lcm_fast(a, b) << std::endl;
+
   return 0;
 }
