@@ -9,7 +9,7 @@
 2 - [Last Digit of Fibonacci Number](week2/fibonacci_last_digit.cpp)  
 3 - [Greatest Common Divisor](week2/gcd.cpp)  
 4 - [Least Common Multiple](week2/lcm.cpp)  
-5 - [Fibonacci Number Again](week2/fibonacci_huge.cpp)  
+5 - [Huge Fibonacci Number Again](week2/fibonacci_huge.cpp)  
 6 - [Last Digit of the Sum of Fibonacci Numbers](week2/fibonacci_sum_last_digit.cpp)  
 7 - [Last Digit of the Partial Sum of Fibonacci Numbers](week2/fibonacci_partial_sum.cpp)  
 8 - [Last Digit of the Sum of Squares of Fibonacci Numbers](week2/fibonacci_sum_squares.cpp)  
