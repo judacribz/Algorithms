@@ -1,4 +1,4 @@
 #!/bin/bash
 
-g++ -pipe -std=c++11 ./$1
+g++ -pipe -std=c++11 ./$1 -o a.out
 ./a.out
