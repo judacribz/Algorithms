@@ -5,14 +5,17 @@
 
 using namespace std;
 
-long long get_fibonacci_partial_sum_naive(long long from, long long to) {
+long long get_fibonacci_partial_sum_naive(long long from, long long to)
+{
     long long sum = 0;
 
     long long current = 0;
-    long long next  = 1;
+    long long next = 1;
 
-    for (long long i = 0; i <= to; ++i) {
-        if (i >= from) {
+    for (long long i = 0; i <= to; ++i)
+    {
+        if (i >= from)
+        {
             sum += current;
         }
 
@@ -23,20 +26,22 @@ long long get_fibonacci_partial_sum_naive(long long from, long long to) {
 
     return sum % 10;
 }
-long get_fib_sum(LL n) {
-    if (n <= 1) {
+long get_fib_sum(LL n)
+{
+    if (n <= 1)
+    {
         return n;
     }
 
-    long 
+    long
         a = 0,
-        b  = 1,
+        b = 1,
         period = 60, // pisano period is always 60 for mod 10
         sum = 0,
         temp;
-        
 
-    for (int i = 0; i < n % period; i++) {
+    for (int i = 0; i < n % period; i++)
+    {
         sum = (sum + b);
         temp = b;
         b = (a + b);
@@ -46,11 +51,13 @@ long get_fib_sum(LL n) {
     return sum;
 }
 
-long get_fibonacci_partial_sum_fast(LL from, LL to) {
-    return ((from == 0) ? get_fib_sum(to) : (get_fib_sum(to) - get_fib_sum(from - 1))) % 10 ;
+long get_fibonacci_partial_sum_fast(LL from, LL to)
+{
+    return ((from == 0) ? get_fib_sum(to) : (get_fib_sum(to) - get_fib_sum(from - 1))) % 10;
 }
 
-int main() {
+int main()
+{
     LL from, to;
     cin >> from >> to;
 
