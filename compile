@@ -1,8 +1,4 @@
 #!/bin/bash
 
 g++ -pipe -std=c++11 ./$1 -o a.out
-<<<<<<< HEAD
 ./a.out
-=======
-./a.out
->>>>>>> 16e4f32118643d6003a43cc59122e82dc9ff3ca6
