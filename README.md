@@ -19,4 +19,5 @@
 2 - [Maximum Value of Loot](week3/fractional_knapsack.cpp)  
 3 - [Car Fueling](week3/car_fueling.cpp)  
 4 - [Maximum Advertisement Revenue](week3/dot_product.cpp)  
-4 - [Collecting Signatures](week3/covering_segments.cpp)  
+5 - [Collecting Signatures](week3/covering_segments.cpp)  
+6 - [Maximum Number of Prizes](week3/different_summands.cpp)  
