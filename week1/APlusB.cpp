@@ -1,17 +1,19 @@
 #include <iostream>
 
+#define LL long long
+
 using namespace std;
 
-int main() {
-	int 
-		a, 
+int main()
+{
+	LL
+		a,
 		b;
 
 	cin >> a;
 	cin >> b;
 
 	cout << a + b << endl;
-	// printf("The sum of %d and %d is %d\n", a, b, a + b);
 
 	return 0;
 }
