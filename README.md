@@ -13,3 +13,10 @@
 6 - [Last Digit of the Sum of Fibonacci Numbers](week2/fibonacci_sum_last_digit.cpp)  
 7 - [Last Digit of the Partial Sum of Fibonacci Numbers](week2/fibonacci_partial_sum.cpp)  
 8 - [Last Digit of the Sum of Squares of Fibonacci Numbers](week2/fibonacci_sum_squares.cpp)  
+
+## Week 3:
+1 - [Money Change](week3/change.cpp)  
+2 - [Maximum Value of Loot](week3/fractional_knapsack.cpp)  
+3 - [Car Fueling](week3/car_fueling.cpp)  
+4 - [Maximum Advertisement Revenue](week3/dot_product.cpp)  
+4 - [Collecting Signatures](week3/covering_segments.cpp)  
