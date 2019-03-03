@@ -1,19 +1,21 @@
 #include <iostream>
 #include <vector>
 
+#define LL long long
+
 using namespace std;
 
-int compute_min_refills(int dist, int tank, vector<long> &stops)
+LL compute_min_refills(LL dist, LL tank, vector<LL> &stops)
 {
-	long
+	LL
 		totalFills = 0,
 		lastStation = 0,
 		lastStopped = 0;
 
 	stops.push_back(dist);
 
-	long currDist;
-	for (vector<long>::iterator it = stops.begin(); it != stops.end(); it++)
+	LL currDist;
+	for (vector<LL>::iterator it = stops.begin(); it != stops.end(); it++)
 	{
 		currDist = *it - lastStopped;
 
@@ -38,28 +40,32 @@ int compute_min_refills(int dist, int tank, vector<long> &stops)
 		// Tank equal to gas stop distance
 		else if (tank == currDist)
 		{
-			lastStation = lastStopped = *it;
-			totalFills++;
+			if (*it != dist)
+			{
+				lastStation = lastStopped = *it;
+				totalFills++;
+			}
 		}
 	}
+
 	return totalFills;
 }
 
 int main()
 {
 	// distance to city
-	long d = 0;
+	LL d = 0;
 	cin >> d;
 
 	// full tank distance
-	int m = 0;
+	LL m = 0;
 	cin >> m;
 
 	// num gas stations on the way
-	int n = 0;
+	LL n = 0;
 	cin >> n;
 
-	vector<long> stops(n);
+	vector<LL> stops(n);
 	for (size_t i = 0; i < n; ++i)
 	{
 		cin >> stops.at(i);
