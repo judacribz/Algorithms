@@ -3,27 +3,63 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <time.h>
 
-using std::vector;
-using std::string;
+using namespace std;
 
-string largest_number(vector<string> a) {
-  //write your code here
-  std::stringstream ret;
-  for (size_t i = 0; i < a.size(); i++) {
-    ret << a[i];
-  }
-  string result;
-  ret >> result;
-  return result;
+bool largest_number_sorter(string const &strA, string const &strB)
+{
+	return stoi(strA + strB) > stoi(strB + strA);
 }
 
-int main() {
-  int n;
-  std::cin >> n;
-  vector<string> a(n);
-  for (size_t i = 0; i < a.size(); i++) {
-    std::cin >> a[i];
-  }
-  std::cout << largest_number(a);
+vector<string> sort_fast(vector<string> a)
+{
+	vector<string> maxString;
+	vector<string>::iterator
+		it,
+		maxIt;
+
+	while (a.size() != 0)
+	{
+		maxIt = a.begin();
+		for (it = maxIt + 1; it != a.end(); it++)
+		{
+			if (largest_number_sorter(*it, *maxIt))
+			{
+				maxIt = it;
+			}
+		}
+		maxString.push_back(*maxIt);
+		a.erase(maxIt);
+	}
+
+	return maxString;
+}
+
+string largest_number(vector<string> a)
+{
+	stringstream ret;
+
+	// sort(a.begin(), a.end(), largest_number_sorter);
+	a = sort_fast(a);
+
+	for (size_t i = 0; i < a.size(); i++)
+	{
+		ret << a[i];
+	}
+
+	return ret.str();
+}
+
+int main()
+{
+	int n;
+	cin >> n;
+	vector<string> a(n);
+
+	for (size_t i = 0; i < a.size(); i++)
+	{
+		cin >> a[i];
+	}
+	cout << largest_number(a);
 }
