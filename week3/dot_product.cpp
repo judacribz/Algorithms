@@ -6,13 +6,13 @@
 
 using namespace std;
 
-int getMax(vector<int> &vec)
+long getMax(vector<long> &vec)
 {
-  vector<int>::iterator
+  vector<long>::iterator
       it = vec.begin(),
       maxit = it;
 
-  int max = *it;
+  long max = *it;
   it++;
 
   for (it; it != vec.end(); it++)
@@ -29,7 +29,7 @@ int getMax(vector<int> &vec)
   return max;
 }
 
-LL max_dot_product(vector<int> a, vector<int> b)
+LL max_dot_product(vector<long> a, vector<long> b)
 {
   // write your code here
   LL result = 0;
@@ -45,7 +45,7 @@ int main()
 {
   size_t n;
   cin >> n;
-  vector<int> a(n), b(n);
+  vector<long> a(n), b(n);
   for (size_t i = 0; i < n; i++)
   {
     cin >> a[i];

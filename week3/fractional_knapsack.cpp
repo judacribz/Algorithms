@@ -74,7 +74,7 @@ int main()
   {
     cin >> values[i] >> weights[i];
   }
-  cout.precision(8);
+  cout.precision(10);
   cout << round(get_optimal_value(capacity, weights, values) * 10000.0) / 10000.0 << endl;
   return 0;
 }
