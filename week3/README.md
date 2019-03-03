@@ -5,3 +5,4 @@
 4 - [Maximum Advertisement Revenue](dot_product.cpp)  
 5 - [Collecting Signatures](covering_segments.cpp)  
 6 - [Maximum Number of Prizes](different_summands.cpp)  
+7 - [Maximum Salary](largest_number.cpp)  
