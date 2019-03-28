@@ -36,12 +36,12 @@ public class BinarySearch {
     public static void main(String[] args) {
         FastScanner scanner = new FastScanner(System.in);
         int n = scanner.nextInt();
-        int[] a = new int[n];
+        long[] a = new long[n];
         for (int i = 0; i < n; i++) {
             a[i] = scanner.nextInt();
         }
         int m = scanner.nextInt();
-        int[] b = new int[m];
+        long[] b = new long[m];
         for (int i = 0; i < m; i++) {
           b[i] = scanner.nextInt();
         }

@@ -1,3 +1,3 @@
 # Week 1: #
-1 - [Sum of Two Digits](APlusB.cpp)  
-2 - [Maximum Pairwise Product](max_pairwise_product.cpp)  
+1 - [Sum of Two Digits](1_sum_of_two_digits)  
+2 - [Maximum Pairwise Product](2_maximum_pairwise_product)  
