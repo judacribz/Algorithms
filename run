@@ -1,0 +1,10 @@
+#!/bin/bash
+
+filename=$(basename $1)
+ext="${filename##*.}"
+
+if [ $ext = "java" ]; then
+    $(dirname $0)/java_run $1
+elif [ $ext = "cpp" ]; then
+    $(dirname $0)/cpp_run $1
+fi

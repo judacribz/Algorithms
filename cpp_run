@@ -2,3 +2,5 @@
 
 g++ -pipe -std=c++11 ./$1 -o a.out
 ./a.out
+
+rm *.out

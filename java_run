@@ -1,8 +1,9 @@
 #!/bin/bash
 
-name=$(basename $1)
-dir=$(dirname $1)
-javac $1.java
-cd $dir
+filename=$(basename $1)
+name="${filename%.*}"
+pwd=$(pwd)
+javac $1 -d $pwd
 java $name
-rm *class
+
+rm *.class
