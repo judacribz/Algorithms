@@ -2,9 +2,12 @@
 
 filename=$(basename $1)
 ext="${filename##*.}"
+dir=$(dirname $0)
 
 if [ $ext = "java" ]; then
-    $(dirname $0)/java_run $1
+    run="java_run"
 elif [ $ext = "cpp" ]; then
-    $(dirname $0)/cpp_run $1
+    run="cpp_run"
 fi
+
+$dir/$run $1 < "$dir/input"
